@@ -67,6 +67,13 @@ public class SeleniumWebElements {
             System.out.println("Çiçek göründü -PASSED");
         }
         else System.out.println("Çiçek bulunamadı - FAILED");
-
+        driver.findElement(By.xpath("//img[@src='https://m.media-amazon.com/images/I/91uuHwNWJzL._AC_UL320_.jpg']")).click();
+        WebElement fiyat=driver.findElement(By.xpath("(//span[@class='a-offscreen'])[2]"));
+        String expectedFiyat="45";
+        if(expectedFiyat.equals(fiyat.getText())){
+            System.out.println("Fiyat uygun-PASSED");
+        }
+        else System.out.println("Fiyat pahalı-FAILED");
+        driver.quit();
     }
 }
