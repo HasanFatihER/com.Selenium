@@ -51,12 +51,12 @@ public class SeleniumWebElements {
        // searchElement.sendKeys("flower"+ Keys.ENTER);
        searchElement.sendKeys("drum");
        searchElement.submit();
-        driver.navigate().back();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+       // driver.navigate().back();
+        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        searchElement=driver.findElement(By.id("twotabsearchtextbox"));
+       searchElement.clear();
 
-        WebElement searchElement1=driver.findElement(By.id("twotabsearchtextbox"));
-        searchElement1.findElement(By.xpath("//input[@id='twotabsearchtextbox']"));
-        searchElement1.sendKeys("flower"+Keys.ENTER);
+        searchElement.sendKeys("flower"+Keys.ENTER);
         driver.findElement(By.xpath("(//div[@class='a-section aok-relative s-image-square-aspect'])[3]")).click();
         driver.findElement(By.xpath("//input[@id='add-to-cart-button']")).click();
         driver.navigate().back();
