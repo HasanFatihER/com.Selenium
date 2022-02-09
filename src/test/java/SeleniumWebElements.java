@@ -32,6 +32,7 @@ public class SeleniumWebElements {
         System.setProperty("webdriver.chrome.driver","src/driver/chromedriver");
         WebDriver driver=new ChromeDriver();
         driver.navigate().to("https://www.amazon.com/");
+        driver.navigate().refresh();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
