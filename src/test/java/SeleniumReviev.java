@@ -32,6 +32,7 @@ public class SeleniumReviev {
         Thread.sleep(2000);
         //önceki sayfaya geri dönün
         driver.navigate().back();
+        driver.close();
 
 
 
